@@ -1,7 +1,7 @@
 # Photo Gallery
 
 ## To run
-* Download the [udacity-portfolio-master.zip](https://github.com/chaituhaki/photo-gallery/archive/master.zip).
+* Download the [photo-gallery-master.zip](https://github.com/chaituhaki/photo-gallery/archive/master.zip).
 * Extract the ZIP file.
 * Double click the _index.html_ file _or_ right click on the file -> open with **Chrome browser**.
 * This will open up the web page in the chrome.
