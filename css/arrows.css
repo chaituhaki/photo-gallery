@@ -1,13 +1,3 @@
-html,
-body {
-  height: 100%;
-  overflow: hidden;
-}
-
-body {
-  background: rgb(17,123,189);
-}
-
 button {
   -webkit-appearance: none;
   background: transparent;
@@ -30,11 +20,11 @@ svg {
 }
 
 .left {
-  left: 5%;
+  left: 10%;
 }
 
 .right {
-  left: 75%;
+  left: 70%;
 }
 
 .left:hover polyline,
@@ -53,10 +43,10 @@ svg {
 }
 
 .right:active polyline {
-  stroke-width: 6;
-  transition: all 100ms ease-in-out;
+  stroke-width: 5;
+  transition: all 100ms ease-in;
 }
 
 polyline {
-  transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in;
 }

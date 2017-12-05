@@ -10,7 +10,7 @@ h1 {
     margin: 10px 0 10px 0;
 }
 
-p {
+.side-menu>p {
     text-align: right;
     font-weight: bold;
     color: #8d8d8d;
@@ -27,6 +27,7 @@ p {
     background-size: cover;
     background-position: center;
     background-color: #000000;
+    transition: all 900ms ease-in;
     
 }
 
@@ -50,6 +51,7 @@ p {
     width: 98px;
     height: 58px;
     outline: 2px solid #b3b3b3;
+    cursor: pointer;
 }
 
 .thumb-wrapper {
@@ -58,6 +60,19 @@ p {
     grid-gap: 4px;
 }
 
-.footer {
-    
+footer {
+    position:absolute;
+    bottom:0;
+    right: 0;
+    padding: 20px;
+}
+
+footer>p {
+    text-align: right;
+    font-weight: bold;
+    color: #8d8d8d;
+}
+
+a {
+    text-decoration-line: none;
 }
