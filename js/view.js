@@ -1,8 +1,13 @@
 var thumbnails = document.getElementById("thumbnails");
 var image = document.getElementById("image");
+var left = document.getElementById("left");
+var right = document.getElementById("right");
 var windowHeight = window.innerHeight;
 
+// sets the image height to windows height
+image.style.height = windowHeight+"px";
 
+// populate thumbnails in side-menu
 for(i=0;i<imageUrl.length; i++){
     var img = document.createElement("img");
     img.setAttribute("src",imageUrl[i]);
@@ -14,7 +19,34 @@ for(i=0;i<imageUrl.length; i++){
     thumbnails.appendChild(img);
 }
 
-var imageClass = document.getElementsByClassName("image");
-image.style.height = windowHeight+"px";
-console.log(imageClass);
-console.log(windowHeight);
+left.addEventListener("click", function(){
+    currentImg = currentBackground();
+    for(i=0;i<imageUrl.length;i++){
+        if(currentImg == imageUrl[0]){
+            break;
+        }
+        else if(currentImg == imageUrl[i]){
+            src = imageUrl[i-1];
+            image.style.backgroundImage = "url('"+src+"')";
+        }
+    }
+});
+
+right.addEventListener("click", function(){
+    currentImg = currentBackground();
+    var len = imageUrl.length;
+    for(i=len;i>=0;i--){
+        console.log(i);
+        if(currentImg == imageUrl[len-1]){
+            break;
+        }
+        else if(currentImg == imageUrl[i]){
+            src = imageUrl[i+1];
+            image.style.backgroundImage = "url('"+src+"')";
+        }
+    }
+});
+// get current background image and returns it
+var currentBackground = function(){
+    return window.getComputedStyle(image,null).getPropertyValue("background-image").slice(5, -2);;
+}
