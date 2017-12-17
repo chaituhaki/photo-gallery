@@ -1,7 +1,8 @@
-* {
+body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    overflow-y: hidden;
 }
 
 h1 {
@@ -28,17 +29,23 @@ h1 {
     background-position: center;
     background-color: #000000;
     transition: all 900ms ease-in;
-    
+
 }
 
 .side-menu {
     box-sizing: border-box;
+    height: 100%;
     padding: 20px;
     background-color: #eaecea;
 }
 
+.side-menu>p {
+  margin: 0;
+}
+
 .thumbnails {
     margin: 20px 0 20px 0;
+    overflow-y: scroll;
 }
 
 .thumb-img {
@@ -61,18 +68,29 @@ h1 {
 }
 
 footer {
-    position:absolute;
-    bottom:0;
-    right: 0;
-    padding: 20px;
+    position:relative;
 }
 
 footer>p {
     text-align: right;
     font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 0;
     color: #8d8d8d;
 }
 
 a {
     text-decoration-line: none;
+}
+
+.thumbnails::-webkit-scrollbar {
+    width: 5px;
+}
+
+.thumbnails::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+}
+
+.thumbnails::-webkit-scrollbar-thumb {
+  background-color: #8d8d8d;
 }

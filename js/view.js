@@ -6,11 +6,13 @@ var windowHeight = window.innerHeight;
 
 // sets the image height to windows height
 image.style.height = windowHeight+"px";
+thumbnails.style.height = windowHeight-202.66+"px";
 //resize image if the window's height is chaged
 window.addEventListener("resize", function(){
   windowHeight = window.innerHeight;
   image.style.height = windowHeight+"px";
-  console.log(windowHeight);
+  thumbnails.style.height = windowHeight-202.67+"px";
+  console.log(windowHeight-400+"px");
 });
 
 // populate thumbnails in side-menu
